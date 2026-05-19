@@ -1,0 +1,56 @@
+{
+  "collections": [
+    {
+      "name": "demo",
+      "slug": "demo",
+      "cover": "https://res.cloudinary.com/dakphzas6/image/upload/v1779152809/51177669982_137f74e430_b_uw9dzj.jpg",
+      "photos": [
+        {
+          "url": "https://res.cloudinary.com/dakphzas6/image/upload/v1779152809/51177669982_137f74e430_b_uw9dzj.jpg",
+          "alt": "Freshly powdered snow"
+        },
+        {
+          "url": "https://res.cloudinary.com/dakphzas6/image/upload/v1779152229/51244801258_d73c0b944b_b_mqypi0.jpg",
+          "alt": "Early Morning on Foggy Mountain"
+        },
+        {
+          "url": "https://res.cloudinary.com/dakphzas6/image/upload/v1779152551/49895424692_63ffcc50ea_b_y6bf5x.jpg",
+          "alt": "Warm tones at dusk"
+        }
+      ]
+    },
+    {
+      "name": "Golden Hour",
+      "slug": "golden-hour",
+      "cover": "https://res.cloudinary.com/dakphzas6/image/upload/v1779152551/49895424692_63ffcc50ea_b_y6bf5x.jpg",
+      "photos": [
+        {
+          "url": "https://res.cloudinary.com/dakphzas6/image/upload/v1779152551/49895424692_63ffcc50ea_b_y6bf5x.jpg",
+          "alt": "Warm tones at dusk"
+        }
+      ]
+    },
+    {
+      "name": "Mist",
+      "slug": "mist",
+      "cover": "https://res.cloudinary.com/dakphzas6/image/upload/v1779152229/51244801258_d73c0b944b_b_mqypi0.jpg",
+      "photos": [
+        {
+          "url": "https://res.cloudinary.com/dakphzas6/image/upload/v1779152229/51244801258_d73c0b944b_b_mqypi0.jpg",
+          "alt": "Early Morning on Foggy Mountain"
+        }
+      ]
+    },
+    {
+      "name": "Winter",
+      "slug": "winter",
+      "cover": "https://res.cloudinary.com/dakphzas6/image/upload/v1779152809/51177669982_137f74e430_b_uw9dzj.jpg",
+      "photos": [
+        {
+          "url": "https://res.cloudinary.com/dakphzas6/image/upload/v1779152809/51177669982_137f74e430_b_uw9dzj.jpg",
+          "alt": "Freshly powdered snow"
+        }
+      ]
+    }
+  ]
+}
