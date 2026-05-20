@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { withTransform } from "@/lib/cloudinary";
 
 interface Collection {
   name: string;
@@ -9,14 +10,18 @@ interface Collection {
 }
 
 export default function CollectionCard({ collection }: { collection: Collection }) {
+  // Force all covers to a consistent 3:2 crop so the grid is uniform
+  // regardless of the original photo's orientation.
+  const cover = withTransform(collection.cover, "c_fill,ar_3:2,w_800,q_auto,f_auto");
+
   return (
     <Link href={`/collections/${collection.slug}`} className="group block">
       <div className="overflow-hidden">
         <Image
-          src={collection.cover}
+          src={cover}
           alt={collection.name}
-          width={1200}
-          height={800}
+          width={800}
+          height={533}
           className="w-full h-auto transition-transform duration-700 ease-out group-hover:scale-[1.03]"
           sizes="(max-width: 768px) 100vw, 50vw"
         />

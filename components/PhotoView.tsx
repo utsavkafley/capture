@@ -6,14 +6,23 @@ import Image from "next/image";
 interface Props {
   url: string;
   alt: string;
+  priority?: boolean;
+  blurDataURL?: string;
 }
 
-export default function PhotoView({ url, alt }: Props) {
+export default function PhotoView({ url, alt, priority, blurDataURL }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // First image is already visible — no scroll trigger needed
+    if (priority) {
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+      return;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -28,15 +37,17 @@ export default function PhotoView({ url, alt }: Props) {
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [priority]);
 
   return (
     <div
       ref={ref}
       style={{
-        opacity: 0,
-        transform: "translateY(16px)",
+        opacity: priority ? 1 : 0,
+        transform: priority ? "translateY(0)" : "translateY(16px)",
         transition: "opacity 0.8s ease, transform 0.8s ease",
+        display: "flex",
+        justifyContent: "center",
       }}
     >
       <Image
@@ -44,8 +55,18 @@ export default function PhotoView({ url, alt }: Props) {
         alt={alt}
         width={1600}
         height={1067}
-        className="w-full h-auto"
-        sizes="(max-width: 768px) 100vw, 85vw"
+        priority={priority}
+        placeholder={blurDataURL ? "blur" : "empty"}
+        blurDataURL={blurDataURL}
+        style={{
+          // Constrains to viewport — handles both landscape and portrait
+          // naturally. Neither dimension ever escapes the viewport.
+          maxHeight: "88vh",
+          maxWidth: "min(80vw, 1440px)",
+          width: "auto",
+          height: "auto",
+        }}
+        sizes="(max-width: 768px) 95vw, min(80vw, 1440px)"
       />
     </div>
   );
