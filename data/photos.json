@@ -30,7 +30,7 @@
     {
       "name": "Landscape",
       "slug": "landscape",
-      "cover": "https://res.cloudinary.com/dakphzas6/image/upload/v1779152551/49895424692_63ffcc50ea_b_y6bf5x.jpg",
+      "cover": "https://res.cloudinary.com/dakphzas6/image/upload/v1779307269/IMG_1920_Edited_ykskkg.jpg",
       "photos": [
         {
           "url": "https://res.cloudinary.com/dakphzas6/image/upload/v1779307269/IMG_1920_Edited_ykskkg.jpg",
@@ -39,6 +39,25 @@
         {
           "url": "https://res.cloudinary.com/dakphzas6/image/upload/v1779307268/127_Edited_bnpizu.jpg",
           "alt": "Oh! Twilight"
+        },
+        {
+          "url": "https://res.cloudinary.com/dakphzas6/image/upload/v1779320328/aaaa_ral2sq.jpg",
+          "alt": "A lovely lake"
+        },
+        {
+          "url": "https://res.cloudinary.com/dakphzas6/image/upload/v1779320549/130_Edited_qs4uf1.jpg",
+          "alt": "Morning after camp"
+        }
+      ]
+    },
+    {
+      "name": "Abstract",
+      "slug": "abstract",
+      "cover": "https://res.cloudinary.com/dakphzas6/image/upload/v1779319696/126_Edited_cqrbqs.jpg",
+      "photos": [
+        {
+          "url": "https://res.cloudinary.com/dakphzas6/image/upload/v1779319696/126_Edited_cqrbqs.jpg",
+          "alt": "Wheew"
         }
       ]
     }
